@@ -20,3 +20,5 @@ for _ in range(n):
         
     elif cmd[0] == "top":
         print(stack[-1] if stack else -1)
+
+    
