@@ -9,4 +9,5 @@ elif a + b + c == 180 and (a == b or a == c or b == c):
 elif a + b + c == 180 and a != b and b != c and a != c:
     print('Scalene')
 else:
-    print('Error')
+    print('Error') //편집
+
