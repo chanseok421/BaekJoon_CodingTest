@@ -21,6 +21,6 @@ for i in range(1, n+1):
         differ = min(differ, abs(sour - bitter))  # 최소 차이 갱신
 
 print(int(differ))
-
+//
 
 
