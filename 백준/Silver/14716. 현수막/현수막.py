@@ -4,7 +4,7 @@ from collections import deque
 M, N = map(int, input().split())
 board = [list(map(int, input().split())) for _ in range(M)]
 visited = [[False]*N for _ in range(M)]
-
+.
 # 8방향
 dx = [-1, -1, -1, 0, 1, 1, 1, 0]
 dy = [-1, 0, 1, 1, 1, 0, -1, -1]
