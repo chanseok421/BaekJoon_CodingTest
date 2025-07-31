@@ -1,17 +1,10 @@
-import sys
+count = int(input()) # 입력받을 스택 리스트 안의 총 숫자의 수
+stk = [] # 스택 리스트
 
-k = int(sys.stdin.readline())
-
-money = []
-
-for _ in range(k):
-    
-    num = int(sys.stdin.readline())
-    
-    if num > 0:
-        money.append(num)
-    elif num == 0:
-       if money:
-           money.pop()
-        
-print(sum(money))
+for i in range(count): 
+    num = int(input())
+    if(num == 0): #num이 0이면 pop
+        stk.pop()
+    else:
+        stk.append(num) #그게 아니라면 append = push
+print(sum(stk))
