@@ -1,19 +1,18 @@
-# 1. 입력 받기
+import sys
+
 N = int(input())
-A = list(map(int, input().split()))
-B = list(map(int, input().split()))
 
-# 2. 정렬 수행
-# A는 오름차순 (작은 수 -> 큰 수)
-A.sort()
+A = sys.stdin.readline().strip().split()
+B = sys.stdin.readline().strip().split()
 
-# B는 내림차순 (큰 수 -> 작은 수)
-B.sort(reverse=True)
+A = [int(x) for x in A]
+B = [int(x) for x in B]
 
-# 3. S 계산
-S = 0
+ans = 0
+
 for i in range(N):
-    S += A[i] * B[i]
+    ans += min(A) * max(B)
+    A.pop(A.index(min(A)))
+    B.pop(B.index(max(B)))
 
-# 4. 출력
-print(S)
+print(ans)
